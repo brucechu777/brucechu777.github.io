@@ -5,3 +5,4 @@ Sitemap: https://brucechu777.github.io/kaigodrill/sitemap.xml
 Sitemap: https://brucechu777.github.io/gaimendrill/sitemap.xml
 Sitemap: https://brucechu777.github.io/idphoto/sitemap.xml
 Sitemap: https://brucechu777.github.io/uchiwa/sitemap.xml
+Sitemap: https://brucechu777.github.io/foodlabel/sitemap.xml
