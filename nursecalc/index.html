@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>点滴の滴下数・輸液ポンプ・酸素ボンベの計算のしかた(病棟電卓)</title>
+<meta name="description" content="滴下数(滴/分)、輸液ポンプの終了時刻、酸素ボンベの使える時間の算式と出典。看護師・看護学生向けの無料計算アプリ「病棟電卓」の使い方。">
+<link rel="canonical" href="https://brucechu777.github.io/nursecalc/">
+<style>
+:root{--bg:#f3f7f8;--ink:#18272c;--soft:#5d6e73;--line:#d9e4e7;--card:#fff;--accent:#1f7a8c;--on:#fff;--warn:#fff6e3;--warnline:#e0a43a}
+@media (prefers-color-scheme:dark){:root{--bg:#111a1c;--ink:#e7f0f2;--soft:#a3b4b8;--line:#2f3f43;--card:#1a2528;--accent:#4fb6c9;--on:#08242b;--warn:#2a2316;--warnline:#8a6a24}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Segoe UI",Roboto,sans-serif}
+main,header,footer{max-width:44rem;margin:0 auto;padding:0 1rem}
+header{padding-top:.9rem;padding-bottom:.9rem;display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:baseline;border-bottom:1px solid var(--line)}
+header .home{font-weight:700;color:var(--ink);text-decoration:none}
+a{color:var(--accent)}
+h1{font-size:1.45rem;line-height:1.35;margin:1.6rem 0 .6rem}
+h2{font-size:1.1rem;margin:2rem 0 .5rem}
+.soft{color:var(--soft);font-size:.9rem}
+.warn{background:var(--warn);border:1px solid var(--warnline);border-radius:10px;padding:.7rem 1rem;margin:1rem 0}
+.cta{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:1.1rem 1rem;margin:2rem 0}
+.cta h2{margin:0 0 .3rem}
+.btn{display:inline-block;background:var(--accent);color:var(--on);text-decoration:none;font-weight:700;padding:.65rem 1.1rem;border-radius:999px}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:.4rem .6rem;text-align:left;vertical-align:top}
+th{background:var(--card)}
+.tbl{overflow-x:auto}
+pre{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.7rem 1rem;font-size:.9rem}
+footer{padding-top:1.2rem;padding-bottom:3rem;border-top:1px solid var(--line);color:var(--soft);font-size:.8rem}
+</style></head><body>
+<header><a class="home" href="https://brucechu777.github.io/nursecalc/">病棟電卓 使い方ガイド</a></header>
+<main><h1>点滴の滴下数・輸液ポンプの終了時刻・酸素ボンベの残り時間の計算のしかた</h1>
+<p>病棟でよく使う計算を、算式と出典つきでまとめました。アプリ「滴下計算・酸素ボンベ｜看護師の病棟電卓」(ホーム画面の名前は「病棟電卓」)では、同じ計算を入力するだけで出せます。結果の下には必ず算式と出典を表示するので、自分で検算できます。</p>
+<div class="warn">This app is not a medical device and does not diagnose, treat, cure, or prevent any medical condition.<br>医療機器ではありません。計算結果は必ずご自身で確認し、医療上の判断は医師等の指示に従ってください。このページは計算のしかたを整理したもので、個別の患者さんへの指示ではありません。</div>
+<div class="cta"><h2>病棟電卓(滴下計算・酸素ボンベ)</h2><p>看護師・看護学生のための病棟の計算アプリ。基本の計算は無料、広告なし、登録なし、オフラインで使えます。</p><p><a class="btn" href="https://play.google.com/store/apps/details?id=com.brucechu.nursecalc&amp;utm_source=web-ja">Google Play でアプリを見る</a></p></div>
+
+<h2>1. 点滴の滴下数(滴/分)</h2>
+<p><b>算式</b>:滴下数(滴/分)= 輸液の総量(mL)× 1mLあたりの滴数(滴/mL)÷ 時間(分)</p>
+<ul><li>mL/h からは、滴/分 = mL/h × 滴数 ÷ 60。20滴/mL の輸液セットなら「mL/h ÷ 3」、60滴/mL なら「mL/h と同じ数」です。</li>
+<li>反対に、滴/分から mL/h を出すときは、mL/h = 滴/分 × 60 ÷ 滴数。</li>
+<li>取整は最後の1回だけ。小数第1位を四捨五入します(途中で丸めると誤差がたまります)。</li>
+<li>1mLあたりの滴数(20滴か60滴か)は、輸液セットの個包装の表示で確認します。選びまちがえると結果が3倍ちがいます。</li></ul>
+<pre>例:500mL を 3時間30分(=210分)で、20滴/mL のセット
+500 × 20 ÷ 210 = 47.6 → 48 滴/分</pre>
+<p><b>アプリでの使い方</b>:ホームの「点滴 滴下数」を開き、「総量・時間」「mL/h→滴/分」「滴/分→mL/h」の3つから選んで入力します。結果の下に、10秒あたりの滴数、1滴あたりの秒数、算式、出典が出ます。「リズムを鳴らす」を押すと、その間隔で音と振動が出ます(画面を開いている間だけ動きます)。</p>
+<p class="soft">出典:<a href="https://www.mhlw.go.jp/seisakunitsuite/bunya/kenkou_iryou/iryou/topics/dl/tp240424-05c_01.pdf">第113回看護師国家試験 午後問題(厚生労働省)</a>の午後90問、<a href="https://www.mhlw.go.jp/seisakunitsuite/bunya/kenkou_iryou/iryou/topics/dl/tp240424-05seitou.pdf">正答</a>は 48 · <a href="https://www.pmda.go.jp/PmdaSearch/kikiDetail/ResultDataSetPDF/530100_219AABZX00039000_D_01_06">輸液セット添付文書(PMDA)</a>(20滴≒1mL / 60滴≒1mL)</p>
+
+<h2>2. 輸液ポンプの残り時間と終了時刻</h2>
+<p><b>算式</b>:残り時間(時間)= 残量(mL)÷ 流量(mL/h)。終了時刻 = 今の時刻 + 残り時間。</p>
+<ul><li>日をまたぐときは「翌 1:17 ごろ」のように「翌」をつけて表示します。</li>
+<li>「必要な流量」の画面では、総量 ÷ 予定時間 で mL/h を出します。</li>
+<li>計算するだけのアプリです。輸液ポンプにつないだり、ポンプの設定を変えたりはしません。</li></ul>
+<pre>例:残量 250mL、流量 100mL/h
+250 ÷ 100 × 60 = 150 分 → 2時間30分</pre>
+<p class="soft">出典:割り算のみ(残量 ÷ 流量)。</p>
+
+<h2>3. 酸素ボンベの使える時間</h2>
+<p><b>算式</b>:残量(L)= ボンベの内容積(L)× 圧力計の読み(MPa)× 10.197。使える時間(分)= 残量(L)÷ 流量(L/分)。</p>
+<ul><li>1MPa ≒ 10.197 kgf/cm²。圧力計が kgf/cm² のときは 10 で割って MPa にしてから入力します。</li>
+<li>アプリは「余裕なし」と「余裕を残して」の2つの時間を並べて表示します。余裕(残す圧力)は初期値が 2MPa で、0〜5MPa で変えられます。施設のルールに合わせてください。</li>
+<li>余裕をもって交換してください。</li></ul>
+<pre>例:内容積 3.4L(500Lボンベ)、14.7MPa、2L/分
+余裕なし:3.4 × 14.7 × 10.197 ÷ 2 = 254.8 分(約4時間14分)
+余裕2MPa:3.4 × (14.7 − 2) × 10.197 ÷ 2 = 220.2 分(約3時間40分)</pre>
+<p class="soft">出典:<a href="https://www.ozakihp.or.jp/wordpress/wp-content/uploads/2019/11/2019_sep_vol6_meshitsu.pdf">尾﨑病院 ME室 広報誌 2019年9月 vol.6</a>(内容積×圧力×10.197 の考え方。リンクのみ)。余裕の値に公的な基準はありません。</p>
+
+<h2>4. 単位換算・BMI・タイマー</h2>
+<ul><li><b>単位換算</b>:g・mg・μg、L・mL、kg・g、時間・分、cm・m の相互換算。</li>
+<li><b>BMI</b>:体重(kg)÷ 身長(m)の2乗。数値と算式だけを表示し、判定はしません。出典:<a href="https://www.e-healthnet.mhlw.go.jp/information/keywords/body-mass-index">e-ヘルスネット「BMI」(厚生労働省)</a></li>
+<li><b>タイマー</b>:点滴や輸液ポンプの結果から「タイマー開始」で、終了予定の時刻に通知と振動でお知らせします(部屋番号などの名前もつけられます)。無料版は同時に1つ、買い切り(¥480、1回のみ)で複数同時、計算の記録(最近50件)、自分で決める滴数(15滴/mL など)が使えます。マナーモード中は鳴らない場合があります。</li></ul>
+
+<h2>アプリの特徴</h2>
+<ul><li>基本の計算はすべて無料。広告なし、ログイン不要、通信なしで使えます(日本語)。</li><li>結果の下に、算式と出典を必ず表示します。</li><li>薬の量(体重あたりの投与量など)は計算しません。</li></ul>
+<div class="cta"><h2>病棟電卓(滴下計算・酸素ボンベ)</h2><p>看護師・看護学生のための病棟の計算アプリ。基本の計算は無料、広告なし、登録なし、オフラインで使えます。</p><p><a class="btn" href="https://play.google.com/store/apps/details?id=com.brucechu.nursecalc&amp;utm_source=web-ja">Google Play でアプリを見る</a></p></div>
+<p class="soft">制定日:2026-11-19 · 連絡先:<a href="mailto:zuyibo123@gmail.com">zuyibo123@gmail.com</a></p></main>
+<footer><p><a href="https://brucechu777.github.io/nursecalc/">ホーム</a> · <a href="https://brucechu777.github.io/nursecalc/privacy.html">プライバシーポリシー</a></p></footer>
+</body></html>
