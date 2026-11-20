@@ -9,3 +9,4 @@ Sitemap: https://brucechu777.github.io/foodlabel/sitemap.xml
 Sitemap: https://brucechu777.github.io/nursecalc/sitemap.xml
 Sitemap: https://brucechu777.github.io/mokumocchi/sitemap.xml
 Sitemap: https://brucechu777.github.io/labeltranslator/sitemap.xml
+Sitemap: https://brucechu777.github.io/talkanalysis/sitemap.xml
